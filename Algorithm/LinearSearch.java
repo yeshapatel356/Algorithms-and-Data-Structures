@@ -16,12 +16,15 @@ public class LinearSearch {
     }
 
     public static int linearSearch(int [] nums, int target){
-       
+       int steps = 0;
        for(int i =0; i<nums.length;i++){
+        steps++;
         if(nums[i]==target){
+            System.out.println("Steps taken by linear search: " + steps);
             return i;
         }
        }
+       System.out.println("Steps taken by linear search" + steps);
         return -1;
     }
 }
