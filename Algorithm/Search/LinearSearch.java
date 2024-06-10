@@ -1,9 +1,11 @@
+//Time COmplexity O(n)
+package Search;
 import javax.swing.text.html.parser.Element;
 
 public class LinearSearch {
     public static void main (String[] args){
-        int nums[] = {2,3,4,56,66,76};
-        int target = 56;
+        int nums[] = new int[20];
+        int target = 10;
 
         int result = linearSearch(nums, target);
 
