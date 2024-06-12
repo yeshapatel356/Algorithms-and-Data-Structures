@@ -1,5 +1,5 @@
 //Time Complexity: O(lon n)
-package Search;
+package search;
 
 
 public class BinarySearch {

@@ -1,6 +1,5 @@
 //Time COmplexity O(n)
-package Search;
-import javax.swing.text.html.parser.Element;
+package search;
 
 public class LinearSearch {
     public static void main (String[] args){
