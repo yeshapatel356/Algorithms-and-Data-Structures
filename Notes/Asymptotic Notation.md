@@ -15,34 +15,22 @@
 - exponential: Θ(2^N)
 - factorial: Θ(N!)
 
-![Runtime](image.png)
 
-## Abstract data Type
 
-- data, operations, error conditions
-- implementation invove algorithms along with their time and space complexities
-- Eg.:
-  - List, stacks, array list
-  - Sets, maps, dictionaries, heaps tables
-  - graphs
-- OPerations:
-  - Add
-  - Remove
-  - Contains
-  - Union
-  - Find
-  - Min
-  - Insert
-  - Delete
+## Separate Chaining vs. Open Addressing
 
-## Map Abstract data type
+| S.No. | Separate Chaining | Open Addressing |
+|---|---|---|
+| 1. | Implementation Simplicity | Computation Cost |
+| | Simpler to implement | Requires more computation for probing |
+| 2. | Handling Full Table | Maximum Size |
+| | Table can always grow with chains | Table can become full, limiting insertions |
+| 3. | Sensitivity | Load Factor and Hash Function |
+| | Less sensitive | Requires careful consideration to avoid clustering |
+| 4. | Use Cases | Unknown Key Patterns | Known Key Patterns |
+| | Preferred when number and frequency of insertions/deletions are unknown | Suitable when key frequency and number are known |
+| 5. | Cache Performance | Limited by Linked Lists | Potentially Better Cache Utilization |
+| | Keys stored in linked lists can hinder cache efficiency | Everything stored in the table for better potential cache locality |
+| 6. | Space Wastage | Unused Parts in Hash Table | Efficient Space Usage |
+| | Some parts of the table might remain unused due to chaining | Slots can be used even if not directly mapped by a key (probing) |
 
-The map is an abstract data type that contains a collection of records.
-Every record of a map contains a key and a value.
-Every key in the map has to be unique.
-
-- put(key, value): A new key-value pair is added to the map. In case, if the key already exists in the map then the old value is replaced by the new.
-- get(key): A key is passed here and with the help of the key we can retrieve the value which is associated with the given key.
-- len(): This operation returns the length of the map i.e. the number of key-value pairs.
-- del: This operation is used to delete a specific key-value pair from the map. This is how it is done: del map[key]. The particular key and its associated value get deleted from the map.
-- in: This operation returns a boolean value. It returns true if the given key exists in the map, else returns false.
